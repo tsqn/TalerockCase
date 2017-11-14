@@ -1,19 +1,19 @@
-namespace EditorUtils.RenderLayersSorting
+п»їnamespace EditorUtils.RenderLayersSorting
 {
     using System.Collections.Generic;
     using System.Linq;
     using UnityEngine;
 
     /// <summary>
-    /// Класс для соритровки очерёдности отрисовки слоёв.
+    /// РљР»Р°СЃСЃ РґР»СЏ СЃРѕСЂРёС‚СЂРѕРІРєРё РѕС‡РµСЂС‘РґРЅРѕСЃС‚Рё РѕС‚СЂРёСЃРѕРІРєРё СЃР»РѕС‘РІ.
     /// </summary>
     internal class RenderLayersSorter
     {
         /// <summary>
-        /// Возвращает у координату нижней непрозрачной точки спрайта объекта.
+        /// Р’РѕР·РІСЂР°С‰Р°РµС‚ Сѓ РєРѕРѕСЂРґРёРЅР°С‚Сѓ РЅРёР¶РЅРµР№ РЅРµРїСЂРѕР·СЂР°С‡РЅРѕР№ С‚РѕС‡РєРё СЃРїСЂР°Р№С‚Р° РѕР±СЉРµРєС‚Р°.
         /// </summary>
-        /// <param name="spriteRenderer">Спрайт рендерер.</param>
-        /// <param name="pixelPerUnit">Пикселей на единицу.</param>
+        /// <param name="spriteRenderer">РЎРїСЂР°Р№С‚ СЂРµРЅРґРµСЂРµСЂ.</param>
+        /// <param name="pixelPerUnit">РџРёРєСЃРµР»РµР№ РЅР° РµРґРёРЅРёС†Сѓ.</param>
         private static Vector3 GetBottomNotAlphaPoint(SpriteRenderer spriteRenderer, int pixelPerUnit = 64)
         {
             var croppedRect = new Rect(
@@ -26,7 +26,7 @@ namespace EditorUtils.RenderLayersSorting
         }
 
         /// <summary>
-        /// Сорировка всех объектов на сцене.
+        /// РЎРѕСЂРёСЂРѕРІРєР° РІСЃРµС… РѕР±СЉРµРєС‚РѕРІ РЅР° СЃС†РµРЅРµ.
         /// </summary>
         public static void SortAllObjects()
         {
@@ -37,9 +37,9 @@ namespace EditorUtils.RenderLayersSorting
         }
 
         /// <summary>
-        /// Сортирует слои.
+        /// РЎРѕСЂС‚РёСЂСѓРµС‚ СЃР»РѕРё.
         /// </summary>
-        /// <param name="renderers">Коллекция спрайтрендеров.</param>
+        /// <param name="renderers">РљРѕР»Р»РµРєС†РёСЏ СЃРїСЂР°Р№С‚СЂРµРЅРґРµСЂРѕРІ.</param>
         private static void SortRenderLayers(List<SpriteRenderer> renderers)
         {
             var sortedCollection = renderers.OrderByDescending(renderer => GetBottomNotAlphaPoint(renderer).y);

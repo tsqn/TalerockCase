@@ -1,21 +1,21 @@
-namespace EditorUtils.StyleChanging
+п»їnamespace EditorUtils.StyleChanging
 {
     using UnityEditor;
     using UnityEngine;
 
     /// <summary>
-    /// Окно смены стиля.
+    /// РћРєРЅРѕ СЃРјРµРЅС‹ СЃС‚РёР»СЏ.
     /// </summary>
     public class StyleChangerWindow : EditorWindow
     {
         /// <summary>
-        /// Выбранный стиль.
-        /// Поле необходимо для отображения выбранного стиля в инспекторе.
+        /// Р’С‹Р±СЂР°РЅРЅС‹Р№ СЃС‚РёР»СЊ.
+        /// РџРѕР»Рµ РЅРµРѕР±С…РѕРґРёРјРѕ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РІС‹Р±СЂР°РЅРЅРѕРіРѕ СЃС‚РёР»СЏ РІ РёРЅСЃРїРµРєС‚РѕСЂРµ.
         /// </summary>
         private Style _style = Style.Base;
 
         /// <summary>
-        /// Приминение стиля.
+        /// РџСЂРёРјРёРЅРµРЅРёРµ СЃС‚РёР»СЏ.
         /// </summary>
         private void ApplyStyle()
         {
@@ -35,7 +35,7 @@ namespace EditorUtils.StyleChanging
         }
 
         /// <summary>
-        /// Отобразить окно.
+        /// РћС‚РѕР±СЂР°Р·РёС‚СЊ РѕРєРЅРѕ.
         /// </summary>
         [MenuItem("Window/Style Changing")]
         public static void ShowWindow()
